@@ -92,10 +92,10 @@ void HeapSort(Type data, int size)
 template<typename Type>
 void QuickSort (Type* data, int size)
 {
-	long leftBorderStack[MAXSTACK], rightBorderStack[MAXSTACK];		// Стек запросов
-																	// Каждый запрос задается парой значений,
-																	// левой(leftBorderStack) и правой(rightBorderStack)
-																	// границами промежутка
+	long leftBorderStack[MAXSTACK], rightBorderStack[MAXSTACK];		// Request Stack
+																	// Each request is set by a pair of values,
+																	// left (leftBorderStack) and right (rightBorderStack)
+																	// the boundaries of the gap
 	auto stackpos = 1; // Текущая позиция стека
 
 	leftBorderStack[1] = 0;
@@ -107,10 +107,10 @@ void QuickSort (Type* data, int size)
 		stackpos--;
 
 		do {
-			long ppos = (leftBorder + rightBorder) >> 1;		//Середина
+			long ppos = (leftBorder + rightBorder) >> 1;		//Middle
 			long i = leftBorder;
 			long j = rightBorder;
-			Type bearing = data[ppos];							// Опорный элемент
+			Type bearing = data[ppos];							//Support element
 			
 			do {
 				while (data[i] < bearing) 

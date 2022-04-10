@@ -1,6 +1,6 @@
 #include "pch.h"
 
-void prefix_function(const string &sub_str, vector<int> &pref) //Префикс-функция для подстроки.
+void prefix_function(const string &sub_str, vector<int> &pref) //Prefix-function for substring.
 {
 	pref.resize(sub_str.size());
 	pref[0] = 0;
@@ -14,7 +14,7 @@ void prefix_function(const string &sub_str, vector<int> &pref) //Префикс-функция
 	}
 }
 
-void KMP(const string &own_str, const string &sub_str) //Эмуляция реализации выше, т.е. sub_str является префиксом строки own_str
+void KMP(const string &own_str, const string &sub_str) //Emulation of the implementation above, i.e. sub_str is a prefix of the own_str string
 {
 	vector<int> pref;
 	prefix_function(sub_str, pref);

@@ -41,7 +41,7 @@ namespace AlgorithmMain
 		{
 			int* data = new int[size];
 			for (auto i = 0; i <= size; ++i)
-				data[i] = rand() % (size / 10); //В случае если задается размер 100,1000,10000,100000 и т.д.
+				data[i] = rand() % (size / 10); //If the size is set to 100,1000,10000,100000, etc.
 			return data;
 		}
 		
@@ -73,7 +73,7 @@ namespace AlgorithmMain
 		{
 			_randomRetryVector.resize(size);
 			for (auto i = 0; i < size; ++i)
-				_randomRetryVector[i] = rand() % (size / 10); //В случае если задается размер 100,1000,10000,100000 и т.д.
+				_randomRetryVector[i] = rand() % (size / 10); //If the size is set to 100,1000,10000,100000, etc.
 			return _randomRetryVector;
 		}
 
